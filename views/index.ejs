@@ -3,9 +3,18 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="/javascripts/main.js"></script>
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <ul id="list">
+      <% for (var i = 0; i < quotes.length; i++) { %>
+        <li><%= quotes[i].body %></li>
+      <% } %>
+    <li>hello</li>
+    </ul>
+    <button>Load More</button>
   </body>
 </html>

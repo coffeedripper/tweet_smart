@@ -1,3 +1,36 @@
+var mongoose = require('mongoose');
+
+var quoteSchema = new mongoose.Schema({
+
+  quote: { type: String, required: true },
+  author: { type: String, required: true },
+});
+
+var Quote = mongoose.model('Quote', quoteSchema);
+
+// Make this available to our other files
+module.exports = Quote;
+
+
+Quote.findOne({ 'author': 'Aristotle' }, 'body', function (err, person) {
+  if (err) return handleError(err);
+  console.log(quote.body);
+})
+
+
+
+
+Quote.find(function (err, quote) {
+  if (err) return handleError(err);
+  res.render('index', { title: 'Tweet Smart' });
+  console.log(quote);
+
+})
+
+
+
+
+
 Change in all things is sweet. Aristotle
 
 Be kind, for everyone you meet is fighting a hard battle. Plato
