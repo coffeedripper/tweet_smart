@@ -2,19 +2,36 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="/javascripts/main.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>A place for people who find most quotes too long...... </p>
+
+
+      <button id="randomQuote">Random Quote!</button>
     <ul id="list">
-      <% for (var i = 0; i < quotes.length; i++) { %>
-        <li><%= quotes[i].body %></li>
-      <% } %>
-    <li>hello</li>
+
+        <li><%= quote.body + " -" + quote.author%></li>
+
     </ul>
-    <button>Load More</button>
+
+    <form id="addQuote">
+
+        <input type="text" class="form-control" id="quoteBody" placeholder="Add Quote Here!">
+        <input type="text" id="quoteAuthor" name="quoteAuthor" placeholder="Add Author Here!">
+        <input type="button" value='Save My Quote' id="saveQuote">
+      </form>
+
+
+
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/javascripts/main.js"></script>
+
+</body>
+
   </body>
 </html>

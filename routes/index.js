@@ -5,21 +5,18 @@ var Quote = require('../models/quote.js');
 
 router.get('/', function(req, res) {
 
+    Quote.findOne({}, function(err, quote) {
+        if (err) {
+            throw err;
+            console.log(err);
+        };
 
 
-Quote.find({}, function(err, quotes) {
-    if (err) {
-      throw err;
-    };
-
-    console.log(err);
-
-    res.render('index', { quotes: quotes, title: "Tweet Smart" });//res render//
-
-
-
-}); //quote.find//
-
+        res.render('index', {
+            quote: quote,
+            title: "Shorty Quote!"
+        }); //res end//
+    }); //quote.find//
 }); //router.get//
 
 
@@ -37,9 +34,3 @@ Quote.find({}, function(err, quotes) {
 
 
 module.exports = router;
-
-
-
-
-
-

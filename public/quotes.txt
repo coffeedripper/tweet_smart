@@ -21,11 +21,19 @@ Quote.findOne({ 'author': 'Aristotle' }, 'body', function (err, person) {
 
 
 Quote.find(function (err, quote) {
-  if (err) return handleError(err);
+  if (err) console.log('err');
   res.render('index', { title: 'Tweet Smart' });
   console.log(quote);
 
 })
+
+
+    <ol id="list">
+      <% for (var i = 0; i < 1; i++) { %>
+        <li><%= quotes[i].body + " -" + quotes[i].author  %></li>
+      <% } %>
+
+    </ol>
 
 
 
