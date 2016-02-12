@@ -4,9 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+// var users = require('./routes/users');
+var quotesApi = require('./routes/api/v1/quotes');
+
+
 
 var app = express();
 
@@ -22,8 +26,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+mongoose.connect("mongodb://smart_tweet_admin:mongomac@ds059215.mongolab.com:59215/smart_tweet");
+
 app.use('/', routes);
-app.use('/users', users);
+// app.use('/users', users);
+app.use('/api/v1/quotes', quotesApi);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

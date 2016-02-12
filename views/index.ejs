@@ -2,10 +2,43 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,400italic' rel='stylesheet' type='text/css'>
+
   </head>
+
+
+
   <body>
+  <div id="topBar">
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+    <p>A place for people who find most quotes too long...... </p>
+
+    </div>
+    <div class="container">
+
+    <div id="quoteDiv">
+
+       <ul id="list">
+          <li id="li"><%= quote.body + " -" + quote.author%></li>
+       </ul>
+       <button id="randomQuote">Random Quote!</button>
+
+    </div>
+
+    <form id="form">
+        <input type="text"  class="form-control" id="quoteBody" placeholder="Add Quote Here!">
+        <input type="text" id="quoteAuthor" name="quoteAuthor" placeholder="Add Author Here!">
+        <input type="button" value='Save My Quote' id="saveQuote">
+    </form>
+
+
+
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/javascripts/main.js"></script>
+
+</body>
+</div>
 </html>
