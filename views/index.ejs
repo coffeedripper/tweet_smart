@@ -5,26 +5,34 @@
 
     <link rel='stylesheet' href='/stylesheets/style.css'/>
     <script type="text/javascript" src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,400italic' rel='stylesheet' type='text/css'>
 
   </head>
+
+
+
   <body>
+  <div id="topBar">
     <h1><%= title %></h1>
     <p>A place for people who find most quotes too long...... </p>
 
+    </div>
+    <div class="container">
 
-      <button id="randomQuote">Random Quote!</button>
-    <ul id="list">
+    <div id="quoteDiv">
 
-        <li><%= quote.body + " -" + quote.author%></li>
+       <ul id="list">
+          <li id="li"><%= quote.body + " -" + quote.author%></li>
+       </ul>
+       <button id="randomQuote">Random Quote!</button>
 
-    </ul>
+    </div>
 
-    <form id="addQuote">
-
-        <input type="text" class="form-control" id="quoteBody" placeholder="Add Quote Here!">
+    <form id="form">
+        <input type="text"  class="form-control" id="quoteBody" placeholder="Add Quote Here!">
         <input type="text" id="quoteAuthor" name="quoteAuthor" placeholder="Add Author Here!">
         <input type="button" value='Save My Quote' id="saveQuote">
-      </form>
+    </form>
 
 
 
@@ -32,6 +40,5 @@
 <script src="/javascripts/main.js"></script>
 
 </body>
-
-  </body>
+</div>
 </html>

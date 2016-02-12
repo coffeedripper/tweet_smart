@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var quoteSchema = new mongoose.Schema({
 
-  body: { type: String, required: true },
+  body: { type: String, required: true},
   author: { type: String, required: true }
 
 });

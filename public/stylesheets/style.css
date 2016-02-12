@@ -1,42 +1,98 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+    background-color: #FFF5C3;
+    font-family: 'Arvo', serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
+}
+
+#randomQuote {
+    background-color: #9BD7D5;
+    font-family: 'Arvo', serif;
+    text-align: center;
+    outline: none;
+    height: 40px;
+    width: 110px;
+    margin: -20px -50px;
+    position: relative;
+    margin-top: 10px;
+    top: 50%;
+    left: 50%;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
 }
 
 
-ol {
-  text-align: left;
-  max-width: 500px;
-  margin: 2rem auto;
+/*#quoteDiv{
+    text-align: left;
+}*/
+
+ul {
+
+    display: inline-block;
+    max-width: 600px;
+    margin: 2rem auto;
+    margin-left: 2rem;
+    margin-top: 60px;
+    position: absolute;
+
+}
+
+#list {
+ margin-left: 18%;
 }
 
 h1 {
-text-align: center;
-}
+    text-align: center;
+    text-shadow: 1px 1px #ff0000;
+    font-size: 50px;
 
-h1 {
-text-align: center;
 }
 
 p {
-text-align: center;
+    text-align: center;
+}
+
+#form {
+    text-align: center;
+    margin-top: 70px;
+}
+
+#quoteBody {
+font-family: 'Arvo', serif;
+font-size: 15px;
+width: 680px;
+height: 30px;
 
 }
-#addQuote {
-text-align: center;
+
+#quoteAuthor{
+font-family: 'Arvo', serif;
+font-size: 15px;
+height: 30px;
+outline: none;
+
 }
 
 #saveQuote {
-  position: absolute;
-    top: 50%;
-  }
 
+    background-color: #9BD7D5;
+    height: 35px;
+    font-family: 'Arvo', serif;
+    text-align: center;
+    outline: none;
+    width: 110px;
+    /*margin: -20px -50px;*/
+    position: relative;
+    /*margin-bottom: 4px;*/
 
-
-
-
-
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -webkit-border-top-right-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+}

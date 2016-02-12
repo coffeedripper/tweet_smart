@@ -32,14 +32,10 @@ $(function() {
     $("#saveQuote").click(function() {
         addQuote();
         console.log("clicked!");
+
     });
 
-    // $("#saveQuote").click(function(evt) {
-    //     evt.preventDefault();
-    //     addQuote();
-    //     console.log("clicked!");
 
-    // }); //close saveQuote //
 
     function randomQuotes() {
         $.ajax({
@@ -91,9 +87,14 @@ $(function() {
             .done(function(data) {
                 console.log("quote saved!");
                 console.log(data);
+                $('#addQuote').trigger("reset");
+
+
+
             })
             .fail(function() {
                 console.log("error");
+
             })
             .always(function() {
                 // console.log("complete");
