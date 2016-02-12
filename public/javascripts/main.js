@@ -87,7 +87,10 @@ $(function() {
             .done(function(data) {
                 console.log("quote saved!");
                 console.log(data);
-                $('#addQuote').trigger("reset");
+                $('#quoteBody').val(" ");
+                $('#quoteAuthor').val(" ");
+
+
 
 
 
